@@ -1,0 +1,880 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+}
+a {
+    color: #2162a1;
+}
+
+body {
+    background-color: #e3e6e6;
+    min-height: 95vh;
+    min-width: 95vw;
+    font-family: "Amazon Amber", Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.header-container {
+    /* background: linear-gradient(to right, #003d32, #04724a); */
+    background-color: #131921;
+    height: 3.5em;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header div {
+    padding: 2px;
+}
+
+#amazon-logo {
+    padding: 10px;
+    height: 30px;
+}
+#us-flag {
+    height: 1rem;
+    width: 1.2rem;
+    border: 1px solid black;
+    margin-right: 0.2rem;
+}
+.deliver-logo {
+    position: relative;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    padding: 10px 0 10px 10px;
+}
+.deliver-logo > i {
+    align-self: flex-end;
+}
+.deliver-text {
+    align-self: center;
+}
+.deliver-text > p {
+    color: #d4d4d4;
+}
+.deliver-text > p ~ p{
+    font-size: 14px;
+    color: white;
+}
+
+.search-bar {
+    width: 720px;
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+}
+#category {
+    width: 50px;
+    height: 40px;
+    padding: 0 5px;
+    color: #6f7780;
+    background-color: #d4d4d4;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#category option {
+    background-color: white;
+}
+#search-bar-input {
+    padding-left: 5px;
+    border-left: 1px solid rgb(173, 172, 172);
+}
+.search-button {
+    width: 45px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* background-color: #a9176f; */
+    background-color: #febd69;
+}
+.search-button > i {
+    transform: scale(1.5);
+    color: #383634;
+}
+
+.language {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: flex-end;
+    padding: 15px 5px;
+}
+
+.sign-in{
+    width: 120px;
+    font-size: 12px;
+    padding: 10px;
+}
+.sign-in > p ~ p {
+    display: inline;
+}
+.sign-in > p ~ p, .orders > p ~ p {
+    font-size: 14px;
+}
+
+.orders {
+    width: 70px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.cart-icon {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.cart-icon > i {
+    transform: scale(1.5);
+}
+.cart-icon > p {
+    align-self: flex-end;
+}
+
+.fa-sort-down {
+    transform: scale(0.7);
+}
+
+#amazon-logo:hover, .deliver-logo:hover, .language:hover, .sign-in:hover, .orders:hover, .cart-icon:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.search-bar:hover {
+    box-shadow: 1px 1px 3px black;
+    padding: 0;
+    border-radius: 5px;
+}
+.search-button:hover {
+    /* background-color: #7f1153; */
+    background-color: #f3a847;
+    cursor: pointer;
+}
+#category:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Styling END for Header*/
+
+nav {
+    background-color: #232f3e;
+    height: 2.5em;
+    display: flex;
+    color: white;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+    width: 98vw;
+    font-size: 14px;
+}
+nav li a{
+    color: white;
+    border-radius: 2px;
+    padding: 0.5em;
+    border: 1px solid #232f3e;
+    margin-left: 0.1em;
+}
+nav li {
+    padding: 0 0.1em;
+}
+
+nav li a:hover {
+    border: 1px solid white;
+}
+
+/* Styling END for nav*/
+
+main {
+    min-height: 90vh;
+    min-width: 95vw;
+    background-image: url("resources/heroes_background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15.9em 1.3em 0;
+}
+
+/* Styling END for main */
+
+.main-banner {
+    height: 2.8em;
+    width: 100%;
+    background-color: #f5f6f6;
+    text-align: center;
+    line-height: 2.8em;
+    font-size: 14px;
+}
+.main-banner p a {
+    color: #007ba6;
+}
+.main-banner p a:hover {
+    color: #d77e33;
+    text-decoration: underline;
+}
+
+/* Styling END for main banner */
+section {
+    margin: 1.2em 0;
+    width: 100%;
+}
+
+.section-1-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 53.5em;
+    gap: 1em;
+    justify-content: space-between;
+}
+.section-1-container h2 {
+    font-size: 21px;
+}
+
+.sec1-boxes {
+    background-color: white;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* First Box Styling Starts */
+.sec1-box-1 {
+    padding: 1.3em 1.5em;
+    position: relative;
+}
+
+#bottom-box1-link {
+    font-size: small;
+    position: absolute;
+    bottom: 1.3em;
+}
+
+.box1-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 85%;
+    gap: 1.5em;
+}
+
+.box1-img1, .box1-img2 {
+    margin-top: 1em;
+}
+.box1-img3, .box1-img4 {
+    margin-bottom: 1.5em;
+}
+
+.box1-images img {
+    height: 90%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.box1-images p {
+    font-size: small;
+}
+
+/* Second & Sixth box Styling starts */
+.sec1-box-2,
+.sec1-box-6 {
+    padding: 1.3em 1.5em;
+    position: relative;
+}
+
+#bottom-box2-link,
+#bottom-box6-link {
+    position: absolute;
+    bottom: 1.3em;
+    font-size: small;
+}
+
+.box2-images,
+.box6-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 85%;
+    column-gap: 0.8em;
+}
+
+.box2-images img,
+.box6-images img {
+    max-width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+.box2-images p,
+.box6-images p {
+    font-size: smaller;
+}
+
+.box2-img1, .box2-img2,
+.box6-img1, .box6-img2 {
+    margin-top: 1em;
+}
+.box2-img3, .box2-img4,
+.box6-img3, .box6-img4 {
+    margin-bottom: 1em;
+}
+
+/* Third box styling starts */
+.sec1-box-3 {
+    padding: 1.3em 1.5em;
+    position: relative;
+}
+
+#bottom-box3-link {
+    font-size: small;
+    position: absolute;
+    bottom: 1.3em;
+}
+
+.box3-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 85%;
+    gap: 1.5em;
+}
+
+.box3-img1, .box3-img2 {
+    margin-top: 1em;
+}
+.box3-img3, .box3-img4 {
+    margin-bottom: 1.5em;
+}
+
+.box3-images img {
+    height: 90%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.box3-images p {
+    font-size: small;
+}
+
+/* Fourth, seventh & eighth box styling starts*/
+.sec1-box-4,
+.sec1-box-7,
+.sec1-box-8 {
+    padding: 1.3em 1.5em;
+    position: relative;
+}
+
+#bottom-box4-link,
+#bottom-box7-link,
+#bottom-box8-link {
+    font-size: small;
+    position: absolute;
+    bottom: 1.3em;
+}
+
+.box4-images,
+.box7-images,
+.box8-images {
+    margin: 1em 0;
+    height: 100%;
+    width: 100%;
+}
+.box4-images img,
+.box7-images img,
+.box8-images img {
+    object-fit: cover;
+    object-position: center;
+    height: 80%;
+    max-width: 100%;
+}
+
+/* Sixth box styling starts */
+.sec1-box-5 {
+    padding: 1.3em 1.3em;
+    position: relative;
+}
+
+.box5-images {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    height: 80%;
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.box5-img-row1 {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    margin-top: 0.5em;
+}
+.box5-img-row-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box5-img-row2 {
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3em;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.box5-img1-row2,
+.box5-img2-row2,
+.box5-img3-row2 {
+    min-width: 0;
+}
+
+.box5-images img {
+    max-width: 100%;
+    height: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box5-images p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#bottom-box5-link {
+    font-size: small;
+    position: absolute;
+    bottom: 1.3em;
+}
+
+/* Styling end for Section 1 */
+
+/* Styling for Sec2 & Sec3 */
+.section-2
+,.section-3 {
+    height: 41vh;
+    padding: 1.2em 1.3em;
+    box-sizing: border-box;
+    font-size: small;
+    background-color: white;
+}
+
+.horizontal-img-section2
+.horizontal-img-section3 {
+    width: 100%;
+    height: 100%;
+}
+
+.sec2-img-page1
+,.sec3-img-page1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0 0;
+    overflow: hidden;
+}
+
+.sec2-img-page1 div {
+    min-width: 13%;
+    text-align: center;
+    line-height: 80%;
+}
+
+.sec2-img-page1 img {
+    max-width: 150%;
+    max-height: 100%;
+}
+
+/* styling for sec3 */
+.sec3-img-page1 div {
+    margin: 0 1em;
+    height: 20%;
+    min-width: 0;
+    max-width: 15%;
+    text-align: center;
+}
+
+.sec3-img-page1 img {
+    max-width: 100%;
+}
+
+/* Styling END for Section 2 & 3 */
+
+/* Styling for Section 4 & 7*/
+
+.section-4-container
+,.section-7-container
+,.section-10-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    height: 26em;
+}
+.section-4-container p
+,.section-7-container p
+,.section-10-container p {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.section-4-container div div,
+.section-7-container div div,
+.section-10-container div div {
+    min-width: 0;
+}
+
+.section-4-container h2,
+.section-7-container h2,
+.section-10-container h2 {
+    font-size: 21px;
+}
+/* Rest styling is same as in Section 1 box-2 */
+
+/* Styling END for Section 4 */
+
+/* Styling for Section 5&6 */
+.section-5-container
+,.section-6-container
+,.section-8-container
+,.section-9-container {
+    height: 41vh;
+    padding: 1.2em 1.3em;
+    box-sizing: border-box;
+    font-size: small;
+    background-color: white;
+}
+
+.section-5-container div div div {
+    min-width: 10%;
+}
+
+.section-6-container div div div {
+    min-width: 13.5%;
+}
+.section-6-container div div div img{
+    max-width: 100%;
+}
+
+
+/* Section 7 stylig */
+.section-7-container div div div {
+    max-width: 100%;
+    min-height: 0;
+}
+
+.section-7-container div div div img {
+    max-width: 100%;
+    object-fit: cover;
+    min-height: 0;
+}
+
+.section-7-container div div {
+    gap: 1em;
+}
+
+/* Styling for SEction 8 */
+.section-8-container div div div {
+    max-width: 20%;
+}
+.section-8-container div div div img{
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/* Styling for section 9 */
+.section-9-container div div div img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.section-9-container div div div {
+    height: 100%;
+    box-sizing: border-box;
+    width: 15%;
+}
+
+/* Styling for section 10 */
+.section-10-container div div {
+    gap: 0.8em;
+}
+
+.section-10-container div div div img{
+    object-fit: cover;
+}
+
+.section-10-container div div div {
+    width: 100%;
+    height: 75%;
+}
+
+/* main styling end here */
+
+/* Last Section stying */
+.last-section {
+    background-color: white;
+    height: 35vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.last-sec-container {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-sec-box {
+    width: 50%;
+    height: 100%;
+    padding: 2em 0;
+    line-height: 2.2em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.last-sec-title {
+    font-size: x-large;
+}
+
+.sign-in-btn {
+    padding: 0.6em 7em;
+    border-radius: 50px;
+    background-color: gold;
+    cursor: pointer;
+}
+
+.last-line {
+    font-size: 0.7rem;
+    line-height: 2em;
+}
+
+.last-line a {
+    text-decoration: underline;
+}
+
+.sign-in-btn:hover {
+    background-color: #ffce12;
+}
+
+/* Styling for end for main & section */
+
+/* Styling for footers */
+
+.back-to-top {
+    text-align: center;
+    height: 8vh;
+    line-height: 8vh;
+    background-color: #37475a;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+.back-to-top:hover {
+    background-color: #485769;
+}
+
+.footer-1 {
+    background-color: #232f3e;
+    height: 75vh;
+    position: relative;
+    color: white;
+}
+.footer-1 li {
+    color: #dfdfdf;
+    font-size: 14px;
+    padding: 0.5em 0;
+    cursor: pointer;
+}
+.footer-1 li:hover {
+    text-decoration: underline;
+}
+.footer-1 h3 {
+    font-size: 16px;
+    padding-bottom: 0.5em;
+}
+
+.footer-1-row2 {
+    position: absolute;
+    bottom: 0;
+    height: 22%;
+    width: 100%;
+    border-top: 1px solid #5c5c5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dfdfdf;
+    font-size: 12px;
+}
+
+.footer-1-row1 {
+    height: 78%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-1-row1 div {
+    height: 74%;
+    padding: 1em;
+}
+
+.make-money-box {
+    width: 13%;
+}
+.help-you-box {
+    width: 11%;
+    margin-right: 4em;
+}
+.know-box {
+    margin-left: 4em;
+}
+
+.arrow-item {
+    display: inline;
+}
+
+.footer-1-row2-container {
+    height: 33%;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-amazon {
+    display: inline-block;
+    height: 100%;
+    width: 15%;
+    background-image: url('compiled.png');
+    background-position: -10px -80px;
+    cursor: pointer;
+}
+
+.footer-row2-content {
+    width: 74%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+}
+.footer-row2-content div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #8d9096;
+    border-radius: 2px;
+    margin-right: 0.6em;
+    padding: 0 0.6em;
+    cursor: pointer;
+}
+
+.footer-1-row2-container span {
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-globe-img {
+    height: 1.5em;
+}
+.footer-cont-img,
+.lang-arrow-img {
+    height: 1em;
+}
+
+.footer1-row2-img {
+    width: 20%;
+}
+.footer1-row2-text {
+    width: 70%;
+}
+
+/* Styling end for footer 1 */
+
+/* Styling starts for footer 2 */
+.footer-2 {
+    background-color: #131a22;
+    height: 70vh;
+}
+
+.footer2-content1 {
+    height: 80%;
+    width: 75%;
+    font-size: 12px;
+    margin: 0 auto;
+    padding-top: 3em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2em;
+    column-gap: 3em;
+}
+
+.footer2-content1 h4 {
+    color: #dddddd;
+}
+.footer2-content1 ul {
+    color: #999999;
+}
+
+.footer2-content1 ul:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer2-content2 {
+    height: 8%;
+    width: 50%;
+    color: #dddddd;
+    margin: 2em auto;
+    font-size: 12px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+}
+
+.footer2-content2 > div{
+    min-height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.footer2-content2 > div > div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#copyright-text:hover {
+    text-decoration: none;
+    cursor: text;
+}
+
+.footer2-content2 img {
+    height: 1em;
+}
